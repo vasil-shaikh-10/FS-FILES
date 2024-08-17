@@ -47,17 +47,3 @@ fs.unlink("index.txt",(err) =>{
     }
 });
 
-console.log(process.argv);
-
-let apr = process.argv[2];
-let filename =process.argv[3];
-let data = process.argv[4];
-
-const creatfile= (vasil) =>{
-    fs.writeFile(filename, data,(err) => {
-        if(apr == "create"){
-            creatfile();
-        }
-    });
-}
-
